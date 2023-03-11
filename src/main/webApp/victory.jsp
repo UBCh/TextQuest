@@ -1,25 +1,28 @@
 
+
+
+
 <%@ page import="com.example.textquest.Content" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
-<!DOCTYPE html>
 <html>
 <head>
-    <title>TextQuest</title>
+    <title>fail</title>
     <link href="main.css" rel="stylesheet">
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <script src="<c:url value="jquery-3.6.0.min.js"/>"></script>
 </head>
-
-
 <body>
-<hr>
-<h1>    basement</h1>
-<h2> Player name : <%=Content.getName()%></h2>
-<h2> Current game: <%=Content.getCurrent()%></h2>
+<section>
+       <article>
+        <h1>victory</h1>
+        <p>you outwitted everyone and ate a fish and rode a bicycle</p>
+        <p> blablabla</p>
+    </article>
+</section>
+
+<footer>
+    <p>Footer</p>
+    <%@ include file="/reStart.jsp" %>
+</footer>
 </body>
-<hr>
-
-
-
 </html>

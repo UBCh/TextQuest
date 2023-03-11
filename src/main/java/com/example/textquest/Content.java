@@ -20,6 +20,40 @@ public class Content {
 	answersFail.put(2,"answer number 2");
 	answersFail.put(3,"answer number 3");
     }
+    static int current=8;
+    static String name="блаблабла";
+    static int level=0;
 
+    public static void setLevel(int lev) {
+	level = lev;
+    }
 
+    public static Map<Integer, String> getQuestions() {
+	return questions;
+    }
+
+    public static Map<Integer, String> getAnswersFail() {
+	return answersFail;
+    }
+
+    public static void setCurrent(int curr) {
+	current = curr;
+
+    }
+
+    public static void setName(String n) {
+	name = n;
+	    }
+
+    public static String getName() {
+	return name;
+    }
+
+    public static int getCurrent() {
+	return current;
+    }
+
+    public static int getLevel() {
+		return level;
+    }
 }

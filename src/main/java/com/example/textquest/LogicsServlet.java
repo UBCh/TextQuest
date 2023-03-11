@@ -15,28 +15,39 @@ import java.util.Map;
 @WebServlet(name = "logicsServlet", value = "/logic")
 public class LogicsServlet extends HttpServlet{
 
+//    @Override
+//    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+//        resp.setContentType("text/html");
+//       int  choice= Integer.parseInt(req.getParameter("choice"));
+//       int  level=Integer.parseInt(req.getParameter("level"));
+//      switch (choice){
+//          case 1: resp.sendRedirect("/fail");
+//          case 2:resp.sendRedirect("/victory");
+//      }
+//
+//
+//    }
+String path="/";
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-//	здесь  в зависимости от нажатой кномпки устанавливаются значения переменных и форвард на нужную страницу
-//        resp.setContentType("text/html;charset=UTF-8");
-//        PrintWriter out =  resp.getWriter();
-//        try {
-//            out.println("<html>");
-//            out.println("<body>");
-//            out.println("<h1 >"+"LOGIK"+" </h1>");
-//           out.println("</body>");
-//            out.println("</html>");
-//        } finally {
-//            out.close();
-//        }
-
         MorpheusServlet.setTitle("BLABLABLA");
+        resp.setContentType("text/html");
+        int  choice= Integer.parseInt(req.getParameter("choice"));
+        int  level=Integer.parseInt(req.getParameter("level"));
+        path="/fail";
+         switch (choice){
+             case 2: path=choiceOfPath(level);
+        }
 
-        String path = "/level";
-        ServletContext servletContext = getServletContext();
-        RequestDispatcher requestDispatcher = servletContext.getRequestDispatcher(path);
-        requestDispatcher.forward(req, resp);
-
+       resp.sendRedirect(path);
     }
+
+     private String choiceOfPath( int  level){
+                switch (level){
+                 case 1,2:  return "/fundament.jsp";
+             case 3: return "/victory.jsp";
+         }
+         return null;
+     }
+
 }

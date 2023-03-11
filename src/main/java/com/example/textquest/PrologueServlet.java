@@ -13,35 +13,22 @@ import java.util.Map;
 
 @WebServlet(name = "prologueServlet", value = "/")
 public class PrologueServlet extends HttpServlet {
+    int current=0;
+    String name="";
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-	// Создание новой сессии
-	HttpSession currentSession = req.getSession(true);
-
-		// Получение имени игрока
-	String name = getName(req);
-	// счетчик игр
-
-        int current= getCurrent();
-	// Добавление в сессию параметров поля (нужно будет для хранения состояния между запросами)
-	currentSession.setAttribute("name", name);
-	// и значений поля, отсортированных по индексу (нужно для отрисовки крестиков и ноликов)
-	currentSession.setAttribute("current", current);
-
-	// Перенаправление запроса на страницу index.jsp через сервер
-	getServletContext().getRequestDispatcher("/index.jsp").forward(req, resp);
-    }
-
-    private int getCurrent() {
-	return 0;
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	resp.setContentType("text/html");
+	name= req.getParameter("lname");
+	current=current+1;
+	Content.setCurrent(current);
+	Content.setName(name);
+	resp.sendRedirect("/fundament.jsp");
     }
 
 
-    private String getName(HttpServletRequest request) {
-	String click = request.getParameter("click");
-	boolean isNumeric = click.chars().allMatch(Character::isDigit);
-	return click;
-    }
+
+
+
 
 }

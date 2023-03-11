@@ -13,7 +13,7 @@
 <h1>    prologue</h1>
 <p>My first paragraph.</p>
 
-<form action="/level">
+<form action="prologueServlet" method="POST">
     <label for="lname">Last name:</label><br>
     <input type="text" id="lname" name="lname" value="Doe"><br><br>
     <input type="submit" value="forward to adventure">
