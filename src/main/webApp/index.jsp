@@ -5,15 +5,15 @@
 <html>
 <head>
     <title>TextQuest</title>
-    <link href="main.css" rel="stylesheet">
+    <link href="static/main.css" rel="stylesheet">
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-    <script src="<c:url value="jquery-3.6.0.min.js"/>"></script>
+    <script src="<c:url value="static/jquery-3.6.0.min.js"/>"></script>
 </head>
 <body>
 <h1>    prologue</h1>
 <p>My first paragraph.</p>
 
-<form action="prologueServlet" method="POST">
+<form action="${pageContext.request.contextPath}/init" method="POST">
     <label for="lname">Last name:</label><br>
     <input type="text" id="lname" name="lname" value="Doe"><br><br>
     <input type="submit" value="forward to adventure">

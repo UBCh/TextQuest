@@ -3,12 +3,13 @@
 <%@ page import="com.example.textquest.Content" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%Content.setLevel(Content.getLevel()+1);%>
+<!DOCTYPE html>
 <html>
 <head>
     <title>fundament</title>
-       <link href="main.css" rel="stylesheet">
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-    <script src="<c:url value="jquery-3.6.0.min.js"/>"></script>
+    <link href="/static/main.css" type="text/css" rel="stylesheet" />
+        <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    <script src="<c:url value="static/jquery-3.6.0.min.js"/>"></script>
 </head>
 <body>
 <header>

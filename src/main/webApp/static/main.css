@@ -50,13 +50,31 @@ footer {
     background-color: #777;
     padding: 10px;
     text-align: center;
-    color: white;
+    color: #ff00fb;
 }
 
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-@media (max-width: 600px) {
-    nav, article {
-        width: 100%;
-        height: auto;
-    }
+button{
+    border-radius: 25px;
+    background: #73AD21;
+    padding: 20px;
+    width: 200px;
+    height: 150px;
+}
+
+p {
+    color: red;
+    text-align: center;
+}
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+
+/* The element to apply the animation to */
+footer {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
 }

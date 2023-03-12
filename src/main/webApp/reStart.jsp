@@ -5,9 +5,9 @@
 <html>
 <head>
     <title>reStart</title>
-    <link href="main.css" rel="stylesheet">
+    <link href="static/main.css" rel="stylesheet">
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-    <script src="<c:url value="jquery-3.6.0.min.js"/>"></script>
+    <script src="<c:url value="static/jquery-3.6.0.min.js"/>"></script>
 </head>
 <section>
     <nav>

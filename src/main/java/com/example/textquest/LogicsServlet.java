@@ -15,22 +15,10 @@ import java.util.Map;
 @WebServlet(name = "logicsServlet", value = "/logic")
 public class LogicsServlet extends HttpServlet{
 
-//    @Override
-//    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        resp.setContentType("text/html");
-//       int  choice= Integer.parseInt(req.getParameter("choice"));
-//       int  level=Integer.parseInt(req.getParameter("level"));
-//      switch (choice){
-//          case 1: resp.sendRedirect("/fail");
-//          case 2:resp.sendRedirect("/victory");
-//      }
-//
-//
-//    }
 String path="/";
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        MorpheusServlet.setTitle("BLABLABLA");
+
         resp.setContentType("text/html");
         int  choice= Integer.parseInt(req.getParameter("choice"));
         int  level=Integer.parseInt(req.getParameter("level"));
