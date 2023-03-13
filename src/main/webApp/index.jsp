@@ -16,7 +16,7 @@
 <form action="${pageContext.request.contextPath}/init" method="POST">
     <label for="lname">Last name:</label><br>
     <input type="text" id="lname" name="lname" value="Doe"><br><br>
-    <input type="submit" value="forward to adventure">
+    <input type="submit"  id="submit" value="forward to adventure">
 </form>
 
 </body>

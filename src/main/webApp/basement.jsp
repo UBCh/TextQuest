@@ -15,7 +15,7 @@
 <body>
 <hr>
 <h1>    basement</h1>
-<h2> Player name : <%=Content.getName()%></h2>
+<h2 id="player_name"> Player name : <%=Content.getName()%></h2>
 <h2> Current game: <%=Content.getCurrent()%></h2>
 </body>
 <hr>
