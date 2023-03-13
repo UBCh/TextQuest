@@ -1,0 +1,32 @@
+image: Ubuntu
+
+stack: jdk 11
+
+
+
+branches:
+
+    - master
+
+
+build: off
+
+install:
+    - cd ..
+
+
+
+
+
+build_script:
+
+  - chmod u+x gradlew
+  - ./gradlew test   -Dselenide.headless=true
+   - ./gradlew allureServe
+
+
+
+test:
+  categories:
+    - Common    # A category common for all jobs
+
