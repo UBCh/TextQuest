@@ -13,7 +13,7 @@ import java.io.IOException;
 public class InitServlet extends HttpServlet {
     int current = 0;
     String name = "";
-
+ User user=User.getInstance();
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 	resp.setContentType("text/html");
@@ -21,9 +21,9 @@ public class InitServlet extends HttpServlet {
 	current = current + 1;
 	HttpSession session = req.getSession();
 	String idSession = session.getId();
-	Content.setCurrent(current);
-	Content.setName(name);
-	Content.setIdSession(idSession);
+	user.setCurrent(current);
+	user.setName(name);
+	user.setIdSession(idSession);
 	resp.sendRedirect("/fundament.jsp");
     }
 
