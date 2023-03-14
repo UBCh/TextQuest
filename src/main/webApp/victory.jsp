@@ -14,15 +14,11 @@
 <body>
 <section>
        <article>
-        <h1>victory</h1>
-        <p>you outwitted everyone and ate a fish and rode a bicycle</p>
+       <p>you outwitted everyone and ate a fish and rode a bicycle</p>
         <p> blablabla</p>
     </article>
+    <%@ include file="/reStart.jsp" %>
 </section>
 
-<footer>
-    <p>Footer</p>
-    <%@ include file="/reStart.jsp" %>
-</footer>
-</body>
+ </body>
 </html>

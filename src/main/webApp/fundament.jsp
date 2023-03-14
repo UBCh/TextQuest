@@ -33,8 +33,7 @@
 </section>
 
 <footer>
-    <p>Footer</p>
-    <%@ include file="/basement.jsp" %>
+     <%@ include file="/basement.jsp" %>
 </footer>
 
 

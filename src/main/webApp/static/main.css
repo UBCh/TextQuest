@@ -4,6 +4,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: lightblue;
 }
 
 /* Style the header */
@@ -54,11 +55,7 @@ button{
     width: 250px;
     height: 100px;
    }
-button:active {
-    background-color: #658e3e;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-}
+
 @keyframes example {
     0%   {background-color:red; left:0px; top:0px;}
     25%  {background-color:yellow; left:200px; top:0px;}
@@ -77,13 +74,21 @@ p {
 
 /* The element to apply the animation to */
 footer {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    animation-name: example;
-    animation-duration: 10s;
+    background-color: #0099cc;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+}
+
+input[type=text]:focus {
+    background-color: #ff00fb;
 }
  input[type=submit] {
+     border-radius: 50px;
+     width: 50%;
+     text-align: center;
+     font-size: 25px;
     background-color: #c40902;
     border: none;
     color: white;
@@ -96,6 +101,23 @@ footer {
     border: 2px solid red;
     padding:  0em 1em;
     border-radius: 10px;
-    font-size: 15px;
+    font-size: 40px;
     line-height: 2;
+    top: 250%;
+    width: 50%;
+    text-align: center;
+}
+
+hr{
+    border: 10px solid #c40902;
+    border-radius: 5px;
+}
+
+#reStart_button{
+    height: 100px;
+    width: 100%;}
+img{
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
 }

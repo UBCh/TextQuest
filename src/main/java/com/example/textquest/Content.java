@@ -1,7 +1,12 @@
 package com.example.textquest;
 
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.HashMap;
 import java.util.Map;
+
 
 public class Content {
 
@@ -21,8 +26,19 @@ public class Content {
 	answersFail.put(3,"answer number 3");
     }
     static int current=8;
-    static String name="блаблабла";
+    static String name="";
     static int level=0;
+    static String idSession="";
+
+
+
+    public static String getIdSession() {
+	return idSession;
+    }
+
+    public static void setIdSession(String idSes) {
+	idSession = idSes;
+    }
 
     public static void setLevel(int lev) {
 	level = lev;

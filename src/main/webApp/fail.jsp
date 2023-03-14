@@ -12,16 +12,11 @@
 </head>
 <body>
 <section>
-       <article>
-        <h1>YOU ARE A LOSSER HAHAHA</h1>
-        <p><%=Content.getAnswersFail().get(Content.getLevel())%></p>
-        <p> blablabla</p>
-    </article>
+    <h1 style="text-align:center;">YOU ARE A LOSSER HAHAHA</h1>
+    <p><%=Content.getAnswersFail().get(Content.getLevel())%>
+    </p>
 </section>
-
-<footer>
-    <p>Footer</p>
-    <%@ include file="/reStart.jsp" %>
-</footer>
 </body>
+<img style="text-align:right;" src='/img/mario.jpg' alt="mario">
+<%@ include file="/reStart.jsp" %>
 </html>
