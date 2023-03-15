@@ -13,19 +13,21 @@ import java.io.IOException;
 public class InitServlet extends HttpServlet {
     int current = 0;
     String name = "";
- User user=User.getInstance();
+    int level=1;
+
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 	resp.setContentType("text/html");
 	name = req.getParameter("lname");
 	current = current + 1;
 	HttpSession session = req.getSession();
 	String idSession = session.getId();
-	user.setCurrent(current);
-	user.setName(name);
-	user.setIdSession(idSession);
+	session.setAttribute("idSession", idSession);
+	session.setAttribute("name", name);
+	session.setAttribute("current", current);
+	session.setAttribute("level",level);
 	resp.sendRedirect("/fundament.jsp");
-    }
+	    }
 
 
 }

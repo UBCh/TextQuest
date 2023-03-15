@@ -25,20 +25,13 @@ public class Content {
 	answersFail.put(2,"answer number 2");
 	answersFail.put(3,"answer number 3");
     }
-    static int current=8;
-    static String name="";
+
     static int level=0;
-    static String idSession="";
 
 
 
-    public static String getIdSession() {
-	return idSession;
-    }
 
-    public static void setIdSession(String idSes) {
-	idSession = idSes;
-    }
+
 
     public static void setLevel(int lev) {
 	level = lev;
@@ -52,22 +45,7 @@ public class Content {
 	return answersFail;
     }
 
-    public static void setCurrent(int curr) {
-	current = curr;
 
-    }
-
-    public static void setName(String n) {
-	name = n;
-	    }
-
-    public static String getName() {
-	return name;
-    }
-
-    public static int getCurrent() {
-	return current;
-    }
 
     public static int getLevel() {
 		return level;

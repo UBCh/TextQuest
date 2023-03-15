@@ -17,17 +17,16 @@ public class LogicsServlet extends HttpServlet{
 
 String path="/";
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-        resp.setContentType("text/html");
-        int  choice= Integer.parseInt(req.getParameter("choice"));
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws  IOException {
+              resp.setContentType("text/html");
+               int  choice= Integer.parseInt(req.getParameter("choice"));
         int  level=Integer.parseInt(req.getParameter("level"));
         path="/fail";
          switch (choice){
              case 2: path=choiceOfPath(level);
         }
+            resp.sendRedirect(path);
 
-       resp.sendRedirect(path);
     }
 
      private String choiceOfPath( int  level){
@@ -37,5 +36,6 @@ String path="/";
          }
          return null;
      }
+
 
 }
