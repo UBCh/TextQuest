@@ -2,8 +2,11 @@
 
 <%@ page import="com.example.textquest.Content" %>
 <%@ page import="com.example.textquest.User" %>
+<%@ page import="lombok.val" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%User.getInstance().setLevel(User.getInstance().getLevel()+1);%>
+<% int temp=User.getInstance().getLevel();
+if (temp>2){User.getInstance().setLevel(1);}
+else {User.getInstance().setLevel(temp+1);}%>
 <!DOCTYPE html>
 <html>
 <head>
