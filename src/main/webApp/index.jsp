@@ -11,15 +11,15 @@
 </head>
 <body>
 <h1 style="text-align:center;">prologue</h1>
-<p>My first paragraph.</p>
+<p>Ты — искатель приключений. Ты дстигаешь своей цели после долгого пути, пройдя через леса и горы, и руины старых городов, в поисках сокровищ. Теперь ты стоишь перед огромной пирамидой. Вход ؅— прямоугольная дыра в стене — прямо перед тобой. Вокруг безлюдная пустыня. Сфинкс позади нависает над тобой, его тень от солнца закрывает. Ты идёшь вперёд, ноги увязают в песке, горячий ветер треплет одежду. Ты у входа, тьма впереди закрывает взор. .</p>
 <br>
 <br>
 <br>
 <br>
 <hr>
 <form action="${pageContext.request.contextPath}/init" method="POST">
-<%--    <label for="lname">what will you be called, my young friend?:</label><br>--%>
-    <input type="text" id="lname" name="lname" value="what will you be called, my young friend? Write your name here"><br><br>
+<label for="lname" >what will you be called, my young friend?:</label><br>
+    <input type="text" id="lname" name="lname" value="Write your name here"><br><br>
     <input type="submit"  id="submit" value="forward to adventure">
 </form>
 

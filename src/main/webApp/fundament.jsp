@@ -26,16 +26,23 @@
 <section>
     <nav>
         <ul>
-            <li><button type="button" onclick="window.location=<%="\'/logic?choice=1&level=" + Content.getLevel() + "\'"%>">blue button</button></li>
-            <li><button type="button" onclick="window.location=<%="\'/logic?choice=2&level=" + Content.getLevel() + "\'"%>">blue button</button></li>
+            <li>
+                <button type="button"
+                        onclick="window.location=<%="\'/logic?choice=1&level=" + Content.getLevel() + "\'"%>"><%=Content.getButtonWong().get(Content.getLevel())%>
+                </button>
+            </li>
+            <li>
+                <button type="button"
+                        onclick="window.location=<%="\'/logic?choice=2&level=" + Content.getLevel() + "\'"%>"><%=Content.getRightButton().get(Content.getLevel())%>
+                </button>
+            </li>
         </ul>
     </nav>
 
     <article>
         <h1>terrible question</h1>
-        <p><%=Content.getQuestions().get(Content.getLevel())%></p>
-        <p> blablabla</p>
-        <p><%=Content.getLevel()%></p>
+        <p><%=Content.getQuestions().get(Content.getLevel())%>
+        </p>
     </article>
 </section>
 

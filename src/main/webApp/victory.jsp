@@ -14,9 +14,8 @@
 <body>
 <section>
        <article>
-       <p>you outwitted everyone and ate a fish and rode a bicycle</p>
-        <p> blablabla</p>
-    </article>
+       <p>Уходишь. Спокойно уходишь. Победа.</p>
+        </article>
     <%@ include file="/reStart.jsp" %>
 </section>
 
