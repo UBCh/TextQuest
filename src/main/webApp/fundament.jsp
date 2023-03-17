@@ -20,7 +20,7 @@
 </head>
 <body>
 <header>
-    <h2>Cities</h2>
+    <h2>ВЕЛИКАЯ ПИРАМИДА САГИ</h2>
 </header>
 
 <section>
@@ -31,6 +31,13 @@
                         onclick="window.location=<%="\'/logic?choice=1&level=" + Content.getLevel() + "\'"%>"><%=Content.getButtonWong().get(Content.getLevel())%>
                 </button>
             </li>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
             <li>
                 <button type="button"
                         onclick="window.location=<%="\'/logic?choice=2&level=" + Content.getLevel() + "\'"%>"><%=Content.getRightButton().get(Content.getLevel())%>
@@ -40,16 +47,23 @@
     </nav>
 
     <article>
-        <h1>terrible question</h1>
-        <p><%=Content.getQuestions().get(Content.getLevel())%>
-        </p>
+        <p><%=Content.getQuestions().get(Content.getLevel())%>        </p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
     </article>
 </section>
 
 <footer>
-    <h1 id="idSession">ID session : ${idSession}</h1>
-    <h2 id="player_name">Player name : ${name}</h2>
-    <h2 id="current_game">Current game: ${current}</h2>
+    <h3 id="idSession">ID session : ${idSession}</h3>
+    <h3 id="player_name">Player name : ${name}</h3>
+    <h3 id="current_game">Current game: ${current}</h3>
 
 </footer>
 

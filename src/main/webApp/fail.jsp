@@ -11,12 +11,12 @@
     <script src="<c:url value="static/jquery-3.6.0.min.js"/>"></script>
 </head>
 <body>
-<section>
-    <h1 style="text-align:center;">YOU ARE A LOSSER HAHAHA</h1>
-    <p><%=Content.getAnswersFail().get(Content.getLevel())%>
-    </p>
+<div class="container">
+    <img src='${pageContext.request.contextPath}/img/end.jpg' alt="end">
+<section style="position:absolute;top: 30%;  text-align: center; ">
+     <p style="font-size: 75px;"><%=Content.getAnswersFail().get(Content.getLevel())%></p>
+    <%@ include file="/reStart.jsp" %>
 </section>
+</div>
 </body>
-<img style="text-align:right;" src='/img/mario.jpg' alt="mario">
-<%@ include file="/reStart.jsp" %>
 </html>

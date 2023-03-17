@@ -1,8 +1,3 @@
-
-
-
-
-<%@ page import="com.example.textquest.Content" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -13,11 +8,10 @@
 </head>
 <body>
 <section>
-       <article>
+       <article style="width: 100%;">
        <p>Уходишь. Спокойно уходишь. Победа.</p>
         </article>
     <%@ include file="/reStart.jsp" %>
 </section>
-
  </body>
 </html>

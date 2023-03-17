@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 
 @WebServlet(name = "initServlet", value = "/init")
 public class InitServlet extends HttpServlet {
@@ -17,7 +18,8 @@ public class InitServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-	resp.setContentType("text/html");
+
+	resp.setContentType("text/html,charset=UTF-8");
 	name = req.getParameter("lname");
 	current = current + 1;
 	HttpSession session = req.getSession();
