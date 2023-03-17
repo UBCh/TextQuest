@@ -1,7 +1,7 @@
 
 
 
-<%@ page import="com.example.textquest.Content" %>
+<%@ page import="com.example.textquest.entities.Content" %>
 
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -27,10 +27,16 @@
     <nav>
         <ul>
             <li>
+                <br>
+                <br>
+                <br>
                 <button type="button"
                         onclick="window.location=<%="\'/logic?choice=1&level=" + Content.getLevel() + "\'"%>"><%=Content.getButtonWong().get(Content.getLevel())%>
                 </button>
             </li>
+            <br>
+            <br>
+            <br>
             <br>
             <br>
             <br>

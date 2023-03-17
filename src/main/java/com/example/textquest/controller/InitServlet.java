@@ -1,4 +1,4 @@
-package com.example.textquest;
+package com.example.textquest.controller;
 
 
 import javax.servlet.ServletException;

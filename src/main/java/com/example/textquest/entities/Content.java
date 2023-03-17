@@ -1,4 +1,4 @@
-package com.example.textquest;
+package com.example.textquest.entities;
 
 import lombok.Data;
 import lombok.Getter;

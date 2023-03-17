@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8"  %>
 <html>
 <head>
     <title>fail</title>
@@ -7,11 +7,21 @@
     <script src="<c:url value="static/jquery-3.6.0.min.js"/>"></script>
 </head>
 <body>
-<section>
-       <article style="width: 100%;">
-       <p>Уходишь. Спокойно уходишь. Победа.</p>
-        </article>
+<div class="container">
+    <img src='${pageContext.request.contextPath}/img/stock.jpg'>
+    <section style="position:absolute;top: 30%;text-align: center; width: 60%; height: auto;">
+        <p>У самурая нет цели, только путь.</p>
+        <p>Уходишь. Спокойно уходишь. Победа.</p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        </section>
     <%@ include file="/reStart.jsp" %>
-</section>
- </body>
+    </div>
+</body>
 </html>

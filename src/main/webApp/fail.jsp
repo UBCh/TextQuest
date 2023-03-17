@@ -1,5 +1,5 @@
 
-<%@ page import="com.example.textquest.Content" %>
+<%@ page import="com.example.textquest.entities.Content" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <!DOCTYPE html>
@@ -12,9 +12,24 @@
 </head>
 <body>
 <div class="container">
-    <img src='${pageContext.request.contextPath}/img/end.jpg' alt="end">
+    <img src='${pageContext.request.contextPath}/img/end.jpg' >
 <section style="position:absolute;top: 30%;  text-align: center; ">
      <p style="font-size: 75px;"><%=Content.getAnswersFail().get(Content.getLevel())%></p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <%@ include file="/reStart.jsp" %>
 </section>
 </div>
