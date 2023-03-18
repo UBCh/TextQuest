@@ -9,7 +9,7 @@
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <script src="<c:url value="static/jquery-3.6.0.min.js"/>"></script>
 </head>
-<li><button type="button" id="reStart_button" onclick="window.location=<%="'/reStart'"%>">return to the beginning</button></li>
+<button type="button" id="reStart_button" onclick="window.location=<%="'/reStart'"%>">return to the beginning</button>
 </body>
 
 </html>

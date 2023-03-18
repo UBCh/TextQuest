@@ -24,7 +24,7 @@
 </header>
 
 <section>
-    <nav>
+    <nav id="id_nav">
         <ul>
             <li>
                 <br>

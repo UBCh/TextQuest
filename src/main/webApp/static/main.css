@@ -73,21 +73,16 @@ button{
     text-align: center;
 }
 h1{
-    color: #0015ff;
+    color: #ffffff;
     text-align: center;
     font-size: 50px;
 }
 p {
-    color: red;
+    color: #151444;
     text-align: center;
     font-size: 50px;
 }
-@keyframes example {
-    from {background-color: red;}
-    to {background-color: yellow;}
-}
 
-/* The element to apply the animation to */
 footer {
     background-color: #0099cc;
     color: #ffffff;
@@ -100,10 +95,10 @@ input[type=text]:focus {
     background-color: #ff00fb;
 }
  input[type=submit] {
-     border-radius: 50px;
-     width: 50%;
+     border-radius: 1px;
+     width: 100%;
      text-align: center;
-     font-size: 25px;
+     font-size: 40px;
     background-color: #c40902;
     border: none;
     color: white;

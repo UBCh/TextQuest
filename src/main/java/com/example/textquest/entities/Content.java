@@ -1,8 +1,5 @@
 package com.example.textquest.entities;
 
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -38,7 +35,7 @@ public class Content {
 
     static {
 	buttonWong.put(1,"К черту суеверия");
-	buttonWong.put(2,"Герои иду направо");
+	buttonWong.put(2,"Герои идут направо");
 	buttonWong.put(3,"Хватай добычу");
     }
 

@@ -1,11 +1,14 @@
 package com.example.textquest;
 
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.LogEventListener;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.*;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -17,6 +20,7 @@ class TextQuestServletTest {
     @BeforeAll
     static void setUpAll() {
 	SelenideLogger.addListener("allure", new AllureSelenide());
+	Configuration.browserCapabilities = new ChromeOptions().addArguments("--remote-allow-origins=*");
 	open("/index.jsp");
 	$("#lname").setValue("johny");
 	$("#submit").click();
@@ -27,7 +31,12 @@ class TextQuestServletTest {
 	SelenideLogger.removeListener("allure");
     }
 
+    @DisplayName("should show the select page")
+    @Test
+    void shouldShowSelectPage() {
+	$("id_nav").shouldBe(visible);
 
+    }
 
     @Test
     @DisplayName("the user entered his name, and it was saved in the session")
@@ -52,4 +61,11 @@ class TextQuestServletTest {
 	var actual =$("#current_game").getOwnText();
 	assertEquals(expected, actual);
     }
+
+
+
+    
+
+
+
 }
