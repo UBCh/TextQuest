@@ -1,6 +1,8 @@
 package com.example.textquest.controller;
 
 
+import com.example.textquest.entities.Content;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -18,7 +20,7 @@ public class InitServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-
+	Content.setLevel(level);
 	resp.setContentType("text/html,charset=UTF-8");
 	name = req.getParameter("lname");
 	current = current + 1;

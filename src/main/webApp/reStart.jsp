@@ -1,4 +1,4 @@
-
+<%@ page import="com.example.textquest.entities.Content" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <!DOCTYPE html>
@@ -11,5 +11,5 @@
 </head>
 <button type="button" id="reStart_button" onclick="window.location=<%="'/reStart'"%>">return to the beginning</button>
 </body>
-
+<% Content.setLevel(1);%>
 </html>

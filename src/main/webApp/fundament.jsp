@@ -7,9 +7,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <!DOCTYPE html>
-<% int temp=Content.getLevel();
-    if (temp>2){Content.setLevel(1);}
-    else {Content.setLevel(temp+1);}%>
 <html>
 <head>
     <title>fundament</title>
@@ -24,13 +21,13 @@
 </header>
 
 <section>
-    <nav id="id_nav">
+    <nav>
         <ul>
             <li>
                 <br>
                 <br>
                 <br>
-                <button type="button"
+                <button type="button" id="id_wrong"
                         onclick="window.location=<%="\'/logic?choice=1&level=" + Content.getLevel() + "\'"%>"><%=Content.getButtonWong().get(Content.getLevel())%>
                 </button>
             </li>
@@ -45,15 +42,15 @@
             <br>
             <br>
             <li>
-                <button type="button"
-                        onclick="window.location=<%="\'/logic?choice=2&level=" + Content.getLevel() + "\'"%>"><%=Content.getRightButton().get(Content.getLevel())%>
+                <button type="button" id="id_right"
+                        onclick="window.location=<%="\'/logic?choice=2&level=" + Content.getLevel() + "\'"%>"> <%=Content.getRightButton().get(Content.getLevel())%>
                 </button>
             </li>
         </ul>
     </nav>
 
     <article>
-        <p><%=Content.getQuestions().get(Content.getLevel())%>        </p>
+        <p id="id_content"><%=Content.getQuestions().get(Content.getLevel())%>        </p>
         <br>
         <br>
         <br>
@@ -72,8 +69,5 @@
     <h3 id="current_game">Current game: ${current}</h3>
 
 </footer>
-
-
-
 </body>
 </html>

@@ -1,4 +1,6 @@
 package com.example.textquest.controller;
+import com.example.textquest.entities.Content;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -31,8 +33,8 @@ String path="/";
 
      private String choiceOfPath( int  level){
                 switch (level){
-                 case 1,2:  return "/fundament.jsp";
-             case 3: return "/victory.jsp";
+                 case 1,2:  { Content.setLevel(level+1); return "/fundament.jsp";}
+         case 3: return "/victory.jsp";
          }
          return null;
      }

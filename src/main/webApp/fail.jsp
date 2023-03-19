@@ -14,7 +14,7 @@
 <div class="container">
     <img style="width: 1890px; height: auto;  opacity: 0.3;" src='${pageContext.request.contextPath}/img/end.jpg' >
 <section style="position:absolute;top: 30%;  text-align: center; ">
-     <p style="font-size: 75px;"><%=Content.getAnswersFail().get(Content.getLevel())%></p>
+     <p style="font-size: 75px;" id="id_fail"><%=Content.getAnswersFail().get(Content.getLevel())%></p>
     <br>
     <br>
     <br>

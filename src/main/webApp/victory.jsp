@@ -10,7 +10,7 @@
 <div class="container">
     <img src='${pageContext.request.contextPath}/img/stock.jpg'>
     <section style="position:absolute;top: 10%;text-align: center; width: 60%; height: auto;">
-        <p>У самурая нет цели, только путь.</p>
+        <p id="id_victory">У самурая нет цели, только путь.</p>
         <p>Уходишь. Спокойно уходишь. Победа.</p>
         <br>
         <br>
