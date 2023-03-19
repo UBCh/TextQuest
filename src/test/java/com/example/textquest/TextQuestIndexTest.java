@@ -21,17 +21,12 @@ class TextQuestIndexTest {
     static void setUpAll() {
 	SelenideLogger.addListener("allure", new AllureSelenide());
 	Configuration.browserCapabilities = new ChromeOptions().addArguments("--remote-allow-origins=*");
-	open("/index.jsp");
-	$("#lname").setValue("johny");
-	$("#submit").click();
-
     }
 
     @AfterAll
     static void tearDownAll() {
 	SelenideLogger.removeListener("allure");
-	closeWindow();
-	sleep(5000);
+
     }
 
 
@@ -39,24 +34,35 @@ class TextQuestIndexTest {
     @DisplayName("the user entered his name, and it was saved in the session")
     @Order(3)
     public void shouldStoreName() {
+	open("/index.jsp");
+	$("#lname").setValue("johny");
+	$("#submit").click();
 	var expected = "Player name : johny";
 	var actual =$("#player_name").getText();
 	assertEquals(expected, actual);
+	closeWindow();
     }
 
     @Test
     @DisplayName("should get session id")
     @Order(2)
     public void shouldGetSessionId() {
+	open("/index.jsp");
+	$("#lname").setValue("johny");
+	$("#submit").click();
 	var expected = "";
 	var actual =$("#idSession").getValue();
 	assertNotEquals(expected, actual);
+	closeWindow();
 	    }
 
     @Test
     @DisplayName("gotta get the game number")
     @Order(1)
      public void shouldGetGameNumber() {
+	open("/index.jsp");
+	$("#lname").setValue("johny");
+	$("#submit").click();
 	$("#id_content").shouldBe(visible);
 	var expected = "Current game: 1";
 	var actual =$("#current_game").getText();

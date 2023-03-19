@@ -1,4 +1,4 @@
-package com.example.textquest.controller;
+package com.example.textquest;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.SelenideElement;
