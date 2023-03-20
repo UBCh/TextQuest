@@ -20,7 +20,6 @@ class IndexServletTest {
 	SelenideLogger.addListener("allure", new AllureSelenide());
 	ChromeOptions options=new ChromeOptions();
 	options.addArguments("--remote-allow-origins=*");
-	options.addArguments("--headless");
 	Configuration.browserCapabilities = options;
     }
 
