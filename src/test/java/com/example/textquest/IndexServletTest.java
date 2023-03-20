@@ -1,9 +1,7 @@
 package com.example.textquest;
 
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.logevents.SelenideLogger;
-import com.example.textquest.entities.Content;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -14,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-class TextQuestIndexTest {
+class IndexServletTest {
 
 
     @BeforeAll
@@ -37,8 +35,9 @@ class TextQuestIndexTest {
 	open("/index.jsp");
 	$("#lname").setValue("johny");
 	$("#submit").click();
-	var expected = "Player name : johny";
-	var actual =$("#player_name").getText();
+//	var expected = "Player name : johny";
+	String expected ="johny";
+	String actual  =getValue($("#player_name").getText());
 	assertEquals(expected, actual);
 	closeWindow();
     }
@@ -50,8 +49,13 @@ class TextQuestIndexTest {
 	open("/index.jsp");
 	$("#lname").setValue("johny");
 	$("#submit").click();
-	var expected = "";
-	var actual =$("#idSession").getValue();
+	sleep(7000);
+	String temp=$("#idSession").getText();
+	String expected = getValue(temp);
+	closeWindow();
+	open("/index.jsp");
+	$("#submit").click();
+	String actual =getValue($("#idSession").getText());
 	assertNotEquals(expected, actual);
 	closeWindow();
 	    }
@@ -64,13 +68,20 @@ class TextQuestIndexTest {
 	$("#lname").setValue("johny");
 	$("#submit").click();
 	$("#id_content").shouldBe(visible);
-	var expected = "Current game: 1";
-	var actual =$("#current_game").getText();
+	int currentGame= Integer.parseInt(getValue($("#current_game").getText()));
+	closeWindow();
+	open("/index.jsp");
+	$("#submit").click();
+	var expected = currentGame+1;
+	  int actual = Integer.parseInt(getValue($("#current_game").getText()));
 	assertEquals(expected, actual);
     }
 
 
-
+        private   String  getValue(String value){
+	    String[] temp = value.split(":");
+		return temp[1].trim();
+	}
 
 
 }
