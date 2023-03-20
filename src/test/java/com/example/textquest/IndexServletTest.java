@@ -18,7 +18,11 @@ class IndexServletTest {
     @BeforeAll
     static void setUpAll() {
 	SelenideLogger.addListener("allure", new AllureSelenide());
-	Configuration.browserCapabilities = new ChromeOptions().addArguments("--remote-allow-origins=*");
+	ChromeOptions options=new ChromeOptions();
+	options.addArguments("--remote-allow-origins=*");
+	options.addArguments("--headless");
+	options.addArguments("--disable-gpu");
+	Configuration.browserCapabilities = options;
     }
 
     @AfterAll
@@ -32,7 +36,7 @@ class IndexServletTest {
     @DisplayName("the user entered his name, and it was saved in the session")
     @Order(3)
     public void shouldStoreName() {
-	open("http://localhost:8080/index.jsp");
+	open("/index.jsp");
 	$("#lname").setValue("johny");
 	$("#submit").click();
 //	var expected = "Player name : johny";
@@ -46,7 +50,7 @@ class IndexServletTest {
     @DisplayName("should get session id")
     @Order(2)
     public void shouldGetSessionId() {
-	open("http://localhost:8080/index.jsp");
+	open("/index.jsp");
 	$("#lname").setValue("johny");
 	$("#submit").click();
 	sleep(7000);
@@ -64,7 +68,7 @@ class IndexServletTest {
     @DisplayName("gotta get the game number")
     @Order(1)
      public void shouldGetGameNumber() {
-	open("http://localhost:8080/index.jsp");
+	open("/index.jsp");
 	$("#lname").setValue("johny");
 	$("#submit").click();
 	$("#id_content").shouldBe(visible);
