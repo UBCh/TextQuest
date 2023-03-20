@@ -72,7 +72,7 @@ class IndexServletTest {
 	closeWindow();
 	open("/index.jsp");
 	$("#submit").click();
-	var expected = currentGame+1;
+	int expected = currentGame+1;
 	  int actual = Integer.parseInt(getValue($("#current_game").getText()));
 	assertEquals(expected, actual);
     }
