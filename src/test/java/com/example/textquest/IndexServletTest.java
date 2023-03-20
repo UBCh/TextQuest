@@ -32,7 +32,7 @@ class IndexServletTest {
     @DisplayName("the user entered his name, and it was saved in the session")
     @Order(3)
     public void shouldStoreName() {
-	open("/index.jsp");
+	open("http://localhost:8080/index.jsp");
 	$("#lname").setValue("johny");
 	$("#submit").click();
 //	var expected = "Player name : johny";
@@ -46,7 +46,7 @@ class IndexServletTest {
     @DisplayName("should get session id")
     @Order(2)
     public void shouldGetSessionId() {
-	open("/index.jsp");
+	open("http://localhost:8080/index.jsp");
 	$("#lname").setValue("johny");
 	$("#submit").click();
 	sleep(7000);
@@ -64,7 +64,7 @@ class IndexServletTest {
     @DisplayName("gotta get the game number")
     @Order(1)
      public void shouldGetGameNumber() {
-	open("/index.jsp");
+	open("http://localhost:8080/index.jsp");
 	$("#lname").setValue("johny");
 	$("#submit").click();
 	$("#id_content").shouldBe(visible);
