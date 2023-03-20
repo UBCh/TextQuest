@@ -1,5 +1,5 @@
 
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8"  %>
 
 <!DOCTYPE html>
 <html>
@@ -10,18 +10,23 @@
     <script src="<c:url value="static/jquery-3.6.0.min.js"/>"></script>
 </head>
 <body>
-<h1 style="text-align:center;">prologue</h1>
-<p>My first paragraph.</p>
-<br>
-<br>
-<br>
-<br>
-<hr>
-<form action="${pageContext.request.contextPath}/init" method="POST">
-<%--    <label for="lname">what will you be called, my young friend?:</label><br>--%>
-    <input type="text" id="lname" name="lname" value="what will you be called, my young friend? Write your name here"><br><br>
-    <input type="submit"  id="submit" value="forward to adventure">
-</form>
+<div class="container">
+    <img src='${pageContext.request.contextPath}/img/images.jpg' alt="pyramid">
+    <section style="position:absolute; top: 1%; text-align: center; ">
+        <h1 style="text-align:center;">ВЕЛИКАЯ ПИРАМИДА САГИ</h1>
+        <p style="color: red">СТОЙ ИСКАТЕЛЬ ПРИКЛЮЧЕНИЙ!!!!</p>
+        <p>Ты достиг своей цели после долгого пути, пройдя через леса и горы, и руины старых городов, в поисках
+            сокровищ. Теперь ты стоишь перед огромной пирамидой. Вход — прямоугольная дыра в стене — прямо перед тобой.
+            Вокруг безлюдная пустыня. Сфинкс позади нависает над тобой, его тень от солнца закрывает. Ты идёшь вперёд,
+            ноги увязают в песке, горячий ветер треплет одежду. Ты у входа, тьма впереди закрывает взор...</p>
+              <hr>
+        <form action="${pageContext.request.contextPath}/init" method="POST" id="action">
+            <label for="lname">как зовут тебя, мой юный друг?:</label><br>
+            <input type="text" id="lname" name="lname" value="Индиана Джонс"><br><br>
+            <input type="submit" id="submit" value="вперед, навстречу приключениям->">
+        </form>
+    </section>
+</div>
 
 </body>
 </html>

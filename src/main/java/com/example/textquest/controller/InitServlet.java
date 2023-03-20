@@ -1,5 +1,7 @@
-package com.example.textquest;
+package com.example.textquest.controller;
 
+
+import com.example.textquest.entities.Content;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -8,24 +10,28 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 
 @WebServlet(name = "initServlet", value = "/init")
 public class InitServlet extends HttpServlet {
     int current = 0;
     String name = "";
- User user=User.getInstance();
+    int level=1;
+
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-	resp.setContentType("text/html");
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+	Content.setLevel(level);
+	resp.setContentType("text/html,charset=UTF-8");
 	name = req.getParameter("lname");
 	current = current + 1;
 	HttpSession session = req.getSession();
 	String idSession = session.getId();
-	user.setCurrent(current);
-	user.setName(name);
-	user.setIdSession(idSession);
+	session.setAttribute("idSession", idSession);
+	session.setAttribute("name", name);
+	session.setAttribute("current", current);
+	session.setAttribute("level",level);
 	resp.sendRedirect("/fundament.jsp");
-    }
+	    }
 
 
 }

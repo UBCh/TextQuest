@@ -1,11 +1,11 @@
-package com.example.textquest;
+package com.example.textquest.controller;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
+
 
 @WebServlet(name = "failServlet", value = "/fail")
 public class FailServlet  extends HttpServlet {

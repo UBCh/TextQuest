@@ -4,6 +4,10 @@
     <option name="state">
       <map>
         <entry key="file://$PROJECT_DIR$/src/main/webApp/basement.jsp" value="file://$PROJECT_DIR$/src/main/webApp" />
+        <entry key="file://$PROJECT_DIR$/src/main/webApp/fail.jsp" value="file://$PROJECT_DIR$/src/main/webApp" />
+        <entry key="file://$PROJECT_DIR$/src/main/webApp/fundament.jsp" value="file://$PROJECT_DIR$/src/main/webApp" />
+        <entry key="file://$PROJECT_DIR$/src/main/webApp/index.jsp" value="file://$PROJECT_DIR$/src/main/webApp" />
+        <entry key="file://$PROJECT_DIR$/src/main/webApp/victory.jsp" value="file://$PROJECT_DIR$/src/main/webApp" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/static/index.jsp" value="file://$PROJECT_DIR$/src/main/webapp/static" />
       </map>
     </option>

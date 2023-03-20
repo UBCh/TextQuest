@@ -7,6 +7,10 @@ body {
     background-color: lightblue;
 }
 
+.container {
+    position: relative;
+    width: 100%;
+}
 /* Style the header */
 header {
     background-color: #666;
@@ -20,7 +24,7 @@ header {
 nav {
     float: left;
     width: 30%;
-    height: 300px; /* only for demonstration, should be removed */
+    height: 600px; /* only for demonstration, should be removed */
     background: #ccc;
     padding: 20px;
 }
@@ -36,7 +40,7 @@ article {
     padding: 20px;
     width: 70%;
     background-color: #f1f1f1;
-    height: 300px; /* only for demonstration, should be removed */
+    height: 600px; /* only for demonstration, should be removed */
 }
 
 
@@ -52,8 +56,10 @@ button{
     border-radius: 25px;
     background: #73AD21;
     padding: 20px;
-    width: 250px;
+    width: 90%;
     height: 100px;
+    font-size: 40px;
+    color: #ffffff;
    }
 
 @keyframes example {
@@ -63,16 +69,20 @@ button{
     75%  {background-color:green; left:0px; top:200px;}
     100% {background-color:red; left:0px; top:0px;}
 }
-p {
-    color: red;
+#action{
     text-align: center;
 }
-@keyframes example {
-    from {background-color: red;}
-    to {background-color: yellow;}
+h1{
+    color: #ffffff;
+    text-align: center;
+    font-size: 50px;
+}
+p {
+    color: #151444;
+    text-align: center;
+    font-size: 50px;
 }
 
-/* The element to apply the animation to */
 footer {
     background-color: #0099cc;
     color: #ffffff;
@@ -85,10 +95,10 @@ input[type=text]:focus {
     background-color: #ff00fb;
 }
  input[type=submit] {
-     border-radius: 50px;
-     width: 50%;
+     border-radius: 1px;
+     width: 100%;
      text-align: center;
-     font-size: 25px;
+     font-size: 40px;
     background-color: #c40902;
     border: none;
     color: white;
@@ -101,23 +111,31 @@ input[type=text]:focus {
     border: 2px solid red;
     padding:  0em 1em;
     border-radius: 10px;
-    font-size: 40px;
+    font-size: 25px;
     line-height: 2;
-    top: 250%;
-    width: 50%;
+    top: 150%;
+    width: 30%;
     text-align: center;
 }
 
 hr{
-    border: 10px solid #c40902;
+    border: 5px solid #4e0f73;
     border-radius: 5px;
 }
 
 #reStart_button{
     height: 100px;
-    width: 100%;}
-img{
-    margin-left: auto;
-    margin-right: auto;
-    width: 25%;
+    width: 100%;
+    font-size: 40px;
+    color: #ffffff;
+    }
+
+img {
+    width: 1870px;
+    height: 800px;
+    opacity: 0.8;
+}
+label{
+    font-size: 25px;
+    color: #12105d;
 }
