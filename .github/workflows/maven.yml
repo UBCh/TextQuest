@@ -19,8 +19,10 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
+       # Optional: do not specify to match Chrome's version
+        chromedriver-version: '110.0.5481.77'
     - name: Build with Maven
       #run: mvn -B package --file pom.xml  -Dbrowser=chrome -Dselenide.headless=true
-      run: mvn tomcat7:run-war -Ddetail=true --file pom.xml  -Dbrowser=chrome -Dselenide.headless=true
+      run: mvn tomcat7:run-war --file pom.xml  -Dbrowser=chrome -Dselenide.headless=true
 
   
