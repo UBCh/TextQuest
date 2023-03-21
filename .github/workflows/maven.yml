@@ -22,7 +22,8 @@ jobs:
 
 
     - name: Build with Maven
-      run: mvn -B --batch-mode test --file pom.xml  -Dbrowser=chrome -Dselenide.headless=true
+       run: mvn -B clean verify
+      #run: mvn -B --batch-mode test --file pom.xml  -Dbrowser=chrome -Dselenide.headless=true
 
 
   
