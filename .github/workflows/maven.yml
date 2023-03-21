@@ -22,7 +22,7 @@ jobs:
 
 
     - name: Build with Maven
-      run: mvn -B --batch-mode TextQuest-1.0-SNAPSHOT.war --file pom.xml  -Dbrowser=chrome -Dselenide.headless=true
+      run: mvn -B --batch-mode test --file pom.xml  -Dbrowser=chrome -Dselenide.headless=true
 
 
   
