@@ -12,6 +12,7 @@
     <title>fundament</title>
     <link href="/static/main.css" type="text/css" rel="stylesheet" />
         <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    <%@ taglib prefix="html" uri="http://struts.apache.org/tags-html" %>
 
     <script src="<c:url value="static/jquery-3.6.0.min.js"/>"></script>
 </head>
@@ -23,34 +24,24 @@
 <section>
     <nav>
         <ul>
-            <li>
-                <br>
-                <br>
-                <br>
-                <button type="button" id="id_wrong"
-                        onclick="window.location=<%="\'/logic?choice=1&level=" + Content.getLevel() + "\'"%>"><%=Content.getButtonWong().get(Content.getLevel())%>
-                </button>
-            </li>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
             <br>
             <li>
-                <button type="button" id="id_right"
-                        onclick="window.location=<%="\'/logic?choice=2&level=" + Content.getLevel() + "\'"%>"> <%=Content.getRightButton().get(Content.getLevel())%>
-                </button>
+                <form action="${pageContext.request.contextPath}/logic" method="POST">
+                    <label for="choice">сделай свой выбор:</label><br>
+                    <select id="choice" name="choice">
+                        <option >${trueChoise}</option>
+                        <option >${falseChoise}</option>
+                    </select>
+                    <input type="submit" id="submit" value="смело шагай->">
+                </form>
+
             </li>
         </ul>
     </nav>
 
     <article>
-        <p id="id_content"><%=Content.getQuestions().get(Content.getLevel())%>        </p>
+        <p id="id_content"><%=Content.getQuestions().get(Content.getLevel())%>
+        </p>
         <br>
         <br>
         <br>

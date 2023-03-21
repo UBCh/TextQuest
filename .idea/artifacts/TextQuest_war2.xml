@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="TextQuest:war">
+    <output-path>$PROJECT_DIR$/out/artifacts/TextQuest_war</output-path>
+    <root id="archive" name="TextQuest_war.war">
+      <element id="artifact" artifact-name="TextQuest:war exploded" />
+    </root>
+  </artifact>
+</component>

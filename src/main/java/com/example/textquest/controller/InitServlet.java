@@ -20,16 +20,20 @@ public class InitServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-	Content.setLevel(level);
+
 	resp.setContentType("text/html,charset=UTF-8");
 	name = req.getParameter("lname");
 	current = current + 1;
+	String rigthChoise=Content.rightButton.get(level);
+	String wrongChoise=Content.buttonWong.get(level);
 	HttpSession session = req.getSession();
 	String idSession = session.getId();
 	session.setAttribute("idSession", idSession);
 	session.setAttribute("name", name);
 	session.setAttribute("current", current);
 	session.setAttribute("level",level);
+	session.setAttribute("trueChoise", rigthChoise);
+	session.setAttribute("falseChoise", wrongChoise);
 	resp.sendRedirect("/fundament.jsp");
 	    }
 

@@ -6,7 +6,7 @@ import java.util.Map;
 
 
 public class Content {
-
+static String temp="";
     public  static Map <Integer, String> questions= new HashMap<>();
 
     static {
@@ -25,8 +25,17 @@ public class Content {
 
     public  static Map <Integer, String>  rightButton= new HashMap<>();
 
+    public static String setTemp(String t) {
+	temp = t;
+	return temp;
+    }
+
+    public static String getTemp() {
+	return temp;
+    }
+
     static {
-	rightButton.put(1,"Поклониться");
+	rightButton.put(1,"bow down");
 	rightButton.put(2,"Налево");
 	rightButton.put(3,"Просто уходи");
     }
@@ -34,12 +43,15 @@ public class Content {
     public  static Map <Integer, String> buttonWong= new HashMap<>();
 
     static {
-	buttonWong.put(1,"К черту суеверия");
+	buttonWong.put(1,"to hell with superstition");
 	buttonWong.put(2,"Герои идут направо");
 	buttonWong.put(3,"Хватай добычу");
     }
 
-    static int level=1;
+
+
+
+    public static int level=1;
 
     public static Map<Integer, String> getRightButton() {
 	return rightButton;
@@ -49,8 +61,8 @@ public class Content {
 	return buttonWong;
     }
 
-    public static void setLevel(int lev) {
-	level = lev;
+    public static void plusLevel() {
+	level = level+1;
     }
 
     public static Map<Integer, String> getQuestions() {
